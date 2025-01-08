@@ -1,0 +1,40 @@
+\section{Sets}
+\label{sets}
+
+Sets.
+
+\subsection{Introduction}
+
+
+\begin{definition}
+    A \vocab{set} is an unordered collection of objects.
+\end{definition}
+
+\begin{example}
+    Below are some finite sets:
+    \begin{itemize}
+        \item $\{1, 2, 4, 7, -3\}$ is a set of five numbers.
+        \item $\{a, b, c\}$ is a set of three letters.
+        \item $\{\text{red}, \text{blue}, \text{green}\}$ is a set of of three colors.
+    \end{itemize}
+    Here are some infinite sets!
+    \begin{itemize}
+        \item $\NN = \{1, 2, 3, \dots\}$ is the set of natural numbers.
+        \item $\ZZ = \{\dots, -2, -1, 0, 1, 2, \dots\}$ is the set of integers.
+        \item $\QQ = \{\frac{a}{b} \; \mid \; a, b \in \ZZ, \; b \neq 0\}$ is the set of rational numbers.
+        \item $\RR$ is the set of real numbers (think number line).
+    \end{itemize}
+\end{example}
+
+\begin{ques}
+    \label{ques:set}
+    Prove that for any set $H$, $|H| < |2^H|$. 
+    
+    That is, the cardinality of the powerset of $H$ is strictly larger than the cardinality of $H$ itself.
+\end{ques}
+
+We'll refer to \ref{ques:set} as a theorem once we prove it. Notice that once we prove it, we can construct a hierarchy of infinities, each provably larger than before.
+
+\begin{remark}
+    The prove of \ref{ques:set} uses what a technique analogous to ``diagonalization'' which appears in many places. In mathematics, you can see it used in \href{https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument}{Cantor's diagonalization argument}, \href{https://en.wikipedia.org/wiki/Russell%27s_paradox}{Russell's paradox}, and \href{https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems}{Godel's incompleteness theorem}. In computer science to prove the undecidability of the \href{https://en.wikipedia.org/wiki/Halting_problem}{halting problem}. In other places too :$)$
+\end{remark}
