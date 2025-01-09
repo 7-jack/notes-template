@@ -15,14 +15,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cs1515}[2023/01/25]
+\ProvidesClass{sizzle}[2023/01/25]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% options %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newif\ifanon
 \anonfalse
 \DeclareOption{anon}{\anontrue}
 
-% This doesn't work yet. 
+% This doesn't work yet.
 \newif\ifcolorful
 \colorfulfalse
 \DeclareOption{colorful}{\colorfultrue}
@@ -406,7 +406,7 @@
 \newcommand{\RR}{\mathbb R}
 \newcommand{\ZZ}{\mathbb Z}
 
-% CS1515
+% Crypto
 \newcommand{\sampledfrom}{\overset{\$}{\leftarrow}}
 \DeclareMathOperator{\Gen}{\mathsf{Gen}}
 \DeclareMathOperator{\Enc}{\mathsf{Enc}}

@@ -1,53 +1,19 @@
-\documentclass[letterpaper, 11pt, colorful, sections]{cs1515}
+\documentclass[letterpaper, 11pt, colorful, sections, nodate]{sizzle}
 \title{Mini Pretty Proofs}
 \author{Jack}
-\date{Fall 2023}
+\date{Last Updated: \today}
 
 \usepackage[textsize=tiny, textwidth=18mm]{todonotes}
 \setuptodonotes{color=green!20}
 \usepackage{marginnote}
 
-\makeatletter
-\renewcommand{\@todonotes@drawMarginNoteWithLine}{%
-\begin{tikzpicture}[remember picture, overlay, baseline=-0.75ex]%
-    \node [coordinate] (inText) {};%
-\end{tikzpicture}%
-\marginnote[{% Draw note in left margin
-    \@todonotes@drawMarginNote%
-    \@todonotes@drawLineToLeftMargin%
-}]{% Draw note in right margin
-    \@todonotes@drawMarginNote%
-    \@todonotes@drawLineToRightMargin%
-}%
-}%
-\makeatother
+% TODO: Add margin comments
 
-\usepackage{tablefootnote} 
-\makeatletter 
-\AfterEndEnvironment{mdframed}{%
- \tfn@tablefootnoteprintout% 
- \gdef\tfn@fnt{0}% 
-}
-\makeatother
-\newcommand{\framedfootnote}{\tablefootnote}
+% Footnotes \framedfootnote
+\usepackage[perpage]{footmisc}
 
-\usepackage{cancel}
-\usetikzlibrary{cd}
+% Numbering of equations reset for each section
 \numberwithin{equation}{section}
-
-\usepackage[all,cmtip]{xy}
-
-% Commas in footnotes:
-\let\oldFootnote\footnote
-\newcommand\nextToken\relax
-
-\renewcommand\footnote[1]{%
-    \oldFootnote{#1}\futurelet\nextToken\isFootnote}
-
-\newcommand\isFootnote{%
-    \ifx\footnote\nextToken\textsuperscript{,}\fi}
-
-% \includeonly{lectures/2023-04-13.tex, lectures/2023-04-11.tex}
 
 \begin{document}
 \maketitle
@@ -55,12 +21,13 @@
     This is my notes template.
 \end{quote}
 \tableofcontents
-% \bibliographystyle{alpha}
-% \bibliography{bibliography}
 
 \newpage
 
 % lectures
-\include{lectures/section-1.tex}
+\include{lectures/sets.tex}
+
+\bibliographystyle{alpha}
+\bibliography{bibliography}
 
 \end{document}
